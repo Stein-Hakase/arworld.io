@@ -11,10 +11,11 @@
 
 <body>
     <main class="main-wrapper fit">
+        <!-- Home screen -->
         <section class="screen-1 fit">
             <div class="content">
                 <h1>P!TCH <br> DiCK</h1>
-                <button class="get-btn">Get</button>
+                <button class="get-btn next-screen-btn">Get</button>
                 <div class="socials">
                     <!-- Twitter -->
                     <a href="#" class="link">
@@ -69,9 +70,13 @@
                 </div>
             </div>
         </section>
+        <!-- Select profession -->
         <section class="screen-2 fit">
-            <div class="content  ">
+            <!-- content for rele selection -->
+            <div class="content">
                 <div class="choice-liste ">
+                    <!-- white border around radio buttons -->
+                    <div class="border-wrapper"></div>
                     <label class="input-radio" for="adviser">
                         <input type="radio" name="choice" id="adviser" value="adviser" checked>
                         <span class="checkmark"></span>
@@ -108,23 +113,88 @@
                         <span>Other</span>
                     </label>
                 </div>
+                <button class="select-btn  next-screen-btn">Select</button>
+            </div>
+            <!-- content for select message method -->
+            <div class="message-options">
+                <button class="email-btn">
+                    <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_41_8462)">
+                            <path
+                                d="M14 28C6.54416 28 0.5 21.9558 0.5 14.5C0.5 7.04416 6.54416 1 14 1C21.4558 1 27.5 7.04416 27.5 14.5C27.5 21.9558 21.4558 28 14 28Z"
+                                stroke="white" />
+                            <mask id="mask0_41_8462" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="8"
+                                width="17" height="13">
+                                <rect x="6.85156" y="9.46857" width="14.9491" height="10.3922" rx="1.5" fill="#C4C4C4"
+                                    stroke="white" />
+                            </mask>
+                            <g mask="url(#mask0_41_8462)">
+                                <rect x="6.85156" y="9.46857" width="14.9491" height="10.3922" rx="1.5"
+                                    stroke="white" />
+                                <path
+                                    d="M13.4262 4.00282C13.9595 3.60282 14.6929 3.60282 15.2262 4.00282L21.0066 8.33816C21.8066 8.93816 21.8066 10.1382 21.0066 10.7382L15.2262 15.0735C14.6929 15.4735 13.9595 15.4735 13.4262 15.0735L7.64573 10.7382C6.84573 10.1382 6.84574 8.93816 7.64574 8.33816L13.4262 4.00282Z"
+                                    stroke="white" />
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_41_8462">
+                                <rect width="28" height="28" fill="white" transform="translate(0 0.5)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    Get via e-mail
+                </button>
+                <button class="teleg-btn">
+                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.5 28C7.04416 28 1 21.9558 1 14.5C1 7.04416 7.04416 1 14.5 1C21.9558 1 28 7.04416 28 14.5C28 21.9558 21.9558 28 14.5 28Z"
+                            stroke="white" />
+                        <path
+                            d="M7.58743 14.2448C11.3455 12.6074 13.8515 11.528 15.1054 11.0065C18.6854 9.51738 19.4293 9.25872 19.9142 9.25008C20.0209 9.2483 20.2593 9.27472 20.4137 9.40005C20.5442 9.50588 20.5801 9.64883 20.5972 9.74917C20.6144 9.8495 20.6358 10.0781 20.6188 10.2567C20.4248 12.2951 19.5853 17.2418 19.1582 19.5249C18.9775 20.4909 18.6217 20.8148 18.2772 20.8465C17.5286 20.9154 16.9601 20.3518 16.2351 19.8765C15.1005 19.1328 14.4595 18.6698 13.3582 17.944C12.0854 17.1053 12.9105 16.6443 13.6358 15.8909C13.8256 15.6937 17.1241 12.6935 17.1879 12.4214C17.1959 12.3873 17.2033 12.2604 17.128 12.1934C17.0526 12.1264 16.9413 12.1494 16.861 12.1676C16.7473 12.1934 14.9347 13.3914 11.4234 15.7617C10.9089 16.1149 10.4429 16.2871 10.0254 16.2781C9.5651 16.2681 8.67969 16.0178 8.02148 15.8038C7.21416 15.5414 6.57252 15.4027 6.62839 14.957C6.65749 14.7248 6.97717 14.4874 7.58743 14.2448Z"
+                            fill="white" />
+                    </svg>
+                    Get via Telegram
+                </button>
+
             </div>
         </section>
-        <section class="screen-3 fit">
 
+        <!-- Form Send -->
+        <section class="screen-3 fit">
+            <form action="" class="content">
+                <input type="text" placeholder="Telegram / Имя / Email">
+                <textarea name="" id="" placeholder="Ваше сообщение (опционально)"></textarea>
+                <button>Send</button>
+            </form>
         </section>
     </main>
 </body>
 <script>
+
     window.addEventListener('load', () => {
         let vh = window.innerHeight * 0.01;
         // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`)
+        let currentScreen = 0
 
-        setInterval(() => {
-            console.log(document.querySelector('input[name="choice"]:checked').value)
-        }, 1000)
+        const screens = document.querySelectorAll("section")
+        const screensCount = screens.length
+
+        const handleNextScreen = () => {
+            screens[currentScreen].classList.replace("show", "hidden")
+            screens[currentScreen].classList.add("hidden")
+            currentScreen++
+            screens[currentScreen].classList.add("show")
+        }
+
+        document.querySelectorAll('.next-screen-btn').forEach(btn => {
+            btn.addEventListener("click", handleNextScreen)
+        })
+        // setInterval(() => {
+        //     console.log(document.querySelector('input[name="choice"]:checked').value)
+        // }, 1000)
     })
+
     window.addEventListener('resize', () => {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`)
