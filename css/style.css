@@ -42,12 +42,32 @@ body {
 
 h1 {
   font-family: Halvar-Md;
-  font-size: 65px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
   line-height: 55px;
   letter-spacing: -0.06em;
-  text-align: left;
-  text-align: center;
+  text-transform: uppercase;
   margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+h3 {
+  font-family: Halvar-Md;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.06em;
+  text-align: left;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 button {
@@ -77,8 +97,9 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 1;
+  overflow-y: auto;
 }
 .main-wrapper section.hidden {
   transform: translateX(-100%);
@@ -90,72 +111,37 @@ button {
 }
 
 .screen-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("../assets/images/curly-line.svg") left no-repeat, url("../assets/images/bg-1.png") right no-repeat;
-  background-size: cover, cover, cover;
+  background: url("../assets/images/curly-line-bot.svg") bottom no-repeat, black url("../assets/images/bg-1-mobile.png") right no-repeat;
+  background-size: 100%, cover;
   transform: translateX(0);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 39px;
+  padding-top: 51px;
 }
 .screen-1 .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  bottom: 11%;
-}
-.screen-1 .get-btn {
-  padding: 2.99628px 8.98884px;
-  max-width: 171px;
-  line-height: 40px;
-  margin-top: 65px;
-}
-.screen-1 .socials {
-  margin-top: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-}
-.screen-1 .socials .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-
-.screen-2 {
-  background: black linear-gradient(129.14deg, #E6FF4F -9.46%, #FF5050 22.02%, rgba(255, 80, 237, 0) 96.27%);
-  padding: 21px;
-  transform: translateX(100%);
-  opacity: 0;
-}
-.screen-2 .content {
-  position: relative;
-  top: 6.7%;
-  background: linear-gradient(157.92deg, #000000 -39.99%, rgba(0, 0, 0, 0.85) 112.36%);
-  background-blend-mode: multiply;
-  opacity: 0.75;
-  border-radius: 13.2019px;
-  padding: 33px 0 41px;
-  max-width: 278px;
-  margin: 0 auto;
+  padding: 0 12px;
+  margin-top: 38px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.screen-2 .choice-liste {
+.screen-1 .logo {
+  align-self: center;
+  width: 100%;
+}
+.screen-1 .logo img {
+  width: 100%;
+}
+.screen-1 h2 {
+  margin-left: 8px;
+}
+.screen-1 .choice-liste {
   display: flex;
   flex-direction: column;
   gap: 28px;
   position: relative;
 }
-.screen-2 .choice-liste .border-wrapper {
+.screen-1 .choice-liste .border-wrapper {
   position: absolute;
   height: calc(100% + 24px);
   width: 36px;
@@ -165,84 +151,79 @@ button {
   border: 1px solid white;
   pointer-events: none;
 }
-.screen-2 .input-radio {
+.screen-1 .input-radio {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 44px;
+  font-family: HelveticaNeueCyr;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
 }
-.screen-2 .input-radio input {
+.screen-1 .input-radio input {
   display: none;
 }
-.screen-2 .input-radio input:checked ~ .checkmark {
+.screen-1 .input-radio input:checked ~ .checkmark {
   background-color: #E6FF4F;
   border: none;
 }
-.screen-2 .input-radio:nth-child(2) input:checked ~ .checkmark {
-  background-color: #FFD84F;
+.screen-1 .input-radio:nth-child(2) input:checked ~ .checkmark {
+  background-color: #FF8E4F;
 }
-.screen-2 .input-radio:nth-child(3) input:checked ~ .checkmark {
-  background-color: #FFA14F;
-}
-.screen-2 .input-radio:nth-child(4) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(3) input:checked ~ .checkmark {
   background-color: #FF5050;
 }
-.screen-2 .input-radio:nth-child(5) input:checked ~ .checkmark {
-  background-color: #FF508F;
-}
-.screen-2 .input-radio:nth-child(6) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(4) input:checked ~ .checkmark {
   background-color: #FF5050;
 }
-.screen-2 .input-radio .checkmark {
+.screen-1 .input-radio:nth-child(5) input:checked ~ .checkmark {
+  background-color: #FF5084;
+}
+.screen-1 .input-radio:nth-child(6) input:checked ~ .checkmark {
+  background-color: #FF50B9;
+}
+.screen-1 .input-radio:nth-child(7) input:checked ~ .checkmark {
+  background-color: #FF50ED;
+}
+.screen-1 .input-radio .checkmark {
   display: block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   border: 1px solid white;
+  margin-right: 36px;
 }
-.screen-2 .select-btn {
-  max-width: 171px;
-  font-size: 18px;
+.screen-1 .learn-more-btn {
+  padding: 2px 0;
+  max-width: 176.55px;
   line-height: 40px;
+  margin-top: 39px;
+  font-size: 16px;
+  line-height: 36px;
   letter-spacing: -0.03em;
   text-align: center;
-  margin-top: 42.88px;
-}
-.screen-2 .message-options {
-  position: relative;
-  top: 23%;
-  background: linear-gradient(157.92deg, #000000 -39.99%, rgba(0, 0, 0, 0.85) 112.36%);
-  background-blend-mode: multiply;
-  opacity: 0.75;
-  border-radius: 13.2019px;
-  padding: 39px 19px 66px;
-  max-width: 278px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.screen-2 .message-options button {
-  display: flex;
-  align-items: center;
-  padding: 4px 0;
-  padding-left: 35px;
-}
-.screen-2 .message-options button svg {
-  margin-right: 10px;
-}
-.screen-2 .message-options button.teleg-btn {
-  margin-top: 16px;
-  background: linear-gradient(94.09deg, #30B8EA -5.57%, #027A95 126.9%), #FFFFFF;
+  background: #000000;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  align-self: center;
 }
 
-.screen-3 {
+.screen-2 {
   background: black url("../assets/images/bg-3-mobile.png") no-repeat;
   background-size: cover;
   transform: translateX(100%);
   opacity: 0;
+  padding: 0 24px 1vh 24px;
+  padding-top: 11.6vh;
+  padding-top: calc(var(--vh, 1vh) * 11.6);
 }
-.screen-3 .content {
+.screen-2 h2 {
+  margin-bottom: 66px;
+}
+.screen-2 .content {
   background: linear-gradient(157.92deg, #000000 -39.99%, rgba(0, 0, 0, 0.85) 112.36%);
   background-blend-mode: multiply;
   border: 0.658768px solid #FFFFFF;
@@ -250,14 +231,14 @@ button {
   border-radius: 13.1754px;
   position: relative;
   top: 14.96%;
-  max-width: 278px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding: 12.84px 20px 37.55px;
+  padding: 22px 20px 33px;
+  width: 100%;
 }
-.screen-3 input {
+.screen-2 input {
   border: none;
   border-radius: 6.29218px;
   width: 100%;
@@ -269,29 +250,58 @@ button {
   color: #000000;
   outline-color: #FF5050;
 }
-.screen-3 input::placeholder {
+.screen-2 input:first-of-type {
+  margin-bottom: 15px;
+}
+.screen-2 input::placeholder {
   color: #A9A9A9;
 }
-.screen-3 textarea {
-  resize: none;
-  width: 100%;
-  height: calc(var(--vh, 1vh) * 41);
-  margin-top: 29px;
-  padding: 0 13.18px;
-  font-size: 11px;
-  font-weight: 550;
-  line-height: 36px;
-  letter-spacing: -0.03em;
-  padding: 0 13.18px;
-  color: #000000;
-  outline-color: #FF5050;
+.screen-2 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.screen-3 textarea::placeholder {
-  color: #A9A9A9;
-}
-.screen-3 button {
-  margin-top: 35.91px;
+.screen-2 button {
+  margin-top: 21vh;
+  margin-top: calc(var(--vh, 1vh) * 21);
   max-width: 176px;
+}
+
+.screen-3 {
+  background: url("../assets/images/curly-line-3.svg") bottom no-repeat, black url("../assets/images/bg-1-mobile.png") right no-repeat;
+  background-size: cover, cover;
+  padding: 21px;
+  transform: translateX(100%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20vh;
+  padding-top: calc(var(--vh, 1vh) * 20);
+  padding-bottom: 8.97vh;
+  padding-bottom: calc(var(--vh, 1vh) * 8.97);
+}
+.screen-3 .header {
+  height: 238px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.screen-3 .socials {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.screen-3 .socials .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
