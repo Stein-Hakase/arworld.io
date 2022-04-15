@@ -138,6 +138,7 @@ button {
 .screen-1 .choice-liste {
   display: flex;
   flex-direction: column;
+  gap: 28px;
   position: relative;
 }
 .screen-1 .choice-liste .border-wrapper {
@@ -161,56 +162,34 @@ button {
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
-  margin-bottom: 28px;
 }
 .screen-1 .input-radio input {
   display: none;
 }
-.screen-1 .input-radio input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(2):checked ~ .checkmark {
   background-color: #E6FF4F;
   border: none;
 }
-.screen-1 .input-radio input:checked ~ span {
+.screen-1 .input-radio:nth-child(2):checked ~ span {
   color: #E6FF4F;
 }
-.screen-1 .input-radio:nth-of-type(2) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(3) input:checked ~ .checkmark {
   background-color: #FF8E4F;
 }
-.screen-1 .input-radio:nth-of-type(2) input:checked ~ span {
-  color: #FF8E4F;
-}
-.screen-1 .input-radio:nth-of-type(3) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(4) input:checked ~ .checkmark {
   background-color: #FF5050;
 }
-.screen-1 .input-radio:nth-of-type(3) input:checked ~ span {
-  color: #FF5050;
-}
-.screen-1 .input-radio:nth-of-type(4) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(5) input:checked ~ .checkmark {
   background-color: #FF5050;
 }
-.screen-1 .input-radio:nth-of-type(4) input:checked ~ span {
-  color: #FF5050;
-}
-.screen-1 .input-radio:nth-of-type(5) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(6) input:checked ~ .checkmark {
   background-color: #FF5084;
 }
-.screen-1 .input-radio:nth-of-type(5) input:checked ~ span {
-  color: #FF5084;
-}
-.screen-1 .input-radio:nth-of-type(6) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(7) input:checked ~ .checkmark {
   background-color: #FF50B9;
 }
-.screen-1 .input-radio:nth-of-type(6) input:checked ~ span {
-  color: #FF50B9;
-}
-.screen-1 .input-radio:nth-of-type(7) {
-  margin-bottom: 0;
-}
-.screen-1 .input-radio:nth-of-type(7) input:checked ~ .checkmark {
+.screen-1 .input-radio:nth-child(8) input:checked ~ .checkmark {
   background-color: #FF50ED;
-}
-.screen-1 .input-radio:nth-of-type(7) input:checked ~ span {
-  color: #FF50ED;
 }
 .screen-1 .input-radio .checkmark {
   display: block;
@@ -328,4 +307,4 @@ button {
   height: 40px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stule.css.map */

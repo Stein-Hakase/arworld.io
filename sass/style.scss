@@ -168,7 +168,7 @@ button {
     .choice-liste {
         display: flex;
         flex-direction: column;
-        gap: 28px;
+        // gap: 28px;
         position: relative;
 
         .border-wrapper {
@@ -183,6 +183,8 @@ button {
         }
     }
 
+
+
     .input-radio {
         cursor: pointer;
         display: flex;
@@ -194,6 +196,9 @@ button {
         letter-spacing: -0.03em;
         text-align: left;
         text-transform: uppercase;
+        margin-bottom: 28px;
+
+
 
         input {
             // visibility: hidden;
@@ -203,39 +208,30 @@ button {
                 &~.checkmark {
                     background-color: #E6FF4F;
                     border: none;
-
                 }
 
+                &~span {
+                    color: #E6FF4F;
+                }
             }
-
 
         }
 
-        &:nth-child(2) {
+        &:nth-of-type(2) {
             input {
                 &:checked {
                     &~.checkmark {
                         background-color: #FF8E4F;
-
                     }
 
-                }
-
-            }
-        }
-
-        &:nth-child(3) {
-            input {
-                &:checked {
-                    &~.checkmark {
-                        background-color: #FF5050;
-
+                    &~span {
+                        color: #FF8E4F;
                     }
                 }
             }
         }
 
-        &:nth-child(4) {
+        &:nth-of-type(3) {
             input {
                 &:checked {
                     &~.checkmark {
@@ -243,12 +239,30 @@ button {
 
                     }
 
+                    &~span {
+                        color: #FF5050;
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(4) {
+            input {
+                &:checked {
+                    &~.checkmark {
+                        background-color: #FF5050;
+
+                    }
+
+                    &~span {
+                        color: #FF5050;
+                    }
                 }
 
             }
         }
 
-        &:nth-child(5) {
+        &:nth-of-type(5) {
             input {
                 &:checked {
                     &~.checkmark {
@@ -256,12 +270,15 @@ button {
 
                     }
 
+                    &~span {
+                        color: #FF5084;
+                    }
                 }
 
             }
         }
 
-        &:nth-child(6) {
+        &:nth-of-type(6) {
             input {
                 &:checked {
                     &~.checkmark {
@@ -269,12 +286,17 @@ button {
 
                     }
 
+                    &~span {
+                        color: #FF50B9;
+                    }
                 }
 
             }
         }
 
-        &:nth-child(7) {
+        &:nth-of-type(7) {
+            margin-bottom: 0;
+
             input {
                 &:checked {
                     &~.checkmark {
@@ -282,6 +304,9 @@ button {
 
                     }
 
+                    &~span {
+                        color: #FF50ED;
+                    }
                 }
 
             }
