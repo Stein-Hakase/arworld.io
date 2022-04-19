@@ -1,11 +1,7 @@
 @font-face {
     font-family: "Halvar-Md";
     src: url("../assets/fonts/HalvarBreit-Md.eot");
-    src: local("Halvar Breitschrift Medium"), local("HalvarBreit-Md"),
-        url("../assets/fonts/HalvarBreit-Md.eot?#iefix") format("embedded-opentype"),
-        url("../assets/fonts/HalvarBreit-Md.woff2") format("woff2"),
-        url("../assets/fonts/HalvarBreit-Md.woff") format("woff"),
-        url("../assets/fonts/HalvarBreit-Md.ttf") format("truetype");
+    src: local("Halvar Breitschrift Medium"), local("HalvarBreit-Md"), url("../assets/fonts/HalvarBreit-Md.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/HalvarBreit-Md.woff2") format("woff2"), url("../assets/fonts/HalvarBreit-Md.woff") format("woff"), url("../assets/fonts/HalvarBreit-Md.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -33,9 +29,8 @@ html {
 body {
     height: 100vh;
     /* Fallback for browsers that do not support Custom Properties */
-    height: calc(var(--vh, 1vh) * 100);
+    // height: calc(var(--vh, 1vh) * 100);
 }
-
 
 *,
 *::before,
@@ -96,8 +91,6 @@ button {
     width: 100%;
 }
 
-
-
 // MIXINS
 @mixin flex-center {
     display: flex;
@@ -130,12 +123,10 @@ button {
             opacity: 1;
         }
     }
-
 }
 
 .screen-1 {
-    background: url("../assets/images/curly-line-bot.svg") bottom no-repeat,
-        black url("../assets/images/bg-1-mobile.png") right no-repeat;
+    background: url("../assets/images/curly-line-bot.svg") bottom no-repeat, black url("../assets/images/bg-1-mobile.png") right no-repeat;
     background-size: 100%, cover;
     transform: translateX(0);
     display: flex;
@@ -153,6 +144,7 @@ button {
     .logo {
         align-self: center;
         width: 100%;
+        max-width: 900px;
 
         img {
             width: 100%;
@@ -162,8 +154,6 @@ button {
     h2 {
         margin-left: 8px;
     }
-
-
 
     .choice-liste {
         display: flex;
@@ -183,8 +173,6 @@ button {
         }
     }
 
-
-
     .input-radio {
         cursor: pointer;
         display: flex;
@@ -197,8 +185,7 @@ button {
         text-align: left;
         text-transform: uppercase;
         margin-bottom: 28px;
-
-
+        width: fit-content;
 
         input {
             // visibility: hidden;
@@ -210,11 +197,10 @@ button {
                     border: none;
                 }
 
-                &~span {
-                    color: #E6FF4F;
-                }
+                // &~span {
+                //     color: #E6FF4F;
+                // }
             }
-
         }
 
         &:nth-of-type(2) {
@@ -224,9 +210,9 @@ button {
                         background-color: #FF8E4F;
                     }
 
-                    &~span {
-                        color: #FF8E4F;
-                    }
+                    // &~span {
+                    //     color: #FF8E4F;
+                    // }
                 }
             }
         }
@@ -236,12 +222,11 @@ button {
                 &:checked {
                     &~.checkmark {
                         background-color: #FF5050;
-
                     }
 
-                    &~span {
-                        color: #FF5050;
-                    }
+                    // &~span {
+                    //     color: #FF5050;
+                    // }
                 }
             }
         }
@@ -251,14 +236,12 @@ button {
                 &:checked {
                     &~.checkmark {
                         background-color: #FF5050;
-
                     }
 
-                    &~span {
-                        color: #FF5050;
-                    }
+                    // &~span {
+                    //     color: #FF5050;
+                    // }
                 }
-
             }
         }
 
@@ -267,14 +250,12 @@ button {
                 &:checked {
                     &~.checkmark {
                         background-color: #FF5084;
-
                     }
 
-                    &~span {
-                        color: #FF5084;
-                    }
+                    // &~span {
+                    //     color: #FF5084;
+                    // }
                 }
-
             }
         }
 
@@ -283,14 +264,12 @@ button {
                 &:checked {
                     &~.checkmark {
                         background-color: #FF50B9;
-
                     }
 
-                    &~span {
-                        color: #FF50B9;
-                    }
+                    // &~span {
+                    //     color: #FF50B9;
+                    // }
                 }
-
             }
         }
 
@@ -301,14 +280,12 @@ button {
                 &:checked {
                     &~.checkmark {
                         background-color: #FF50ED;
-
                     }
 
-                    &~span {
-                        color: #FF50ED;
-                    }
+                    // &~span {
+                    //     color: #FF50ED;
+                    // }
                 }
-
             }
         }
 
@@ -320,8 +297,6 @@ button {
             border: 1px solid white;
             margin-right: 36px;
         }
-
-
     }
 
     .learn-more-btn {
@@ -333,7 +308,6 @@ button {
         line-height: 36px;
         letter-spacing: -0.03em;
         text-align: center;
-
         background: #000000;
         border: 1px solid #FFFFFF;
         border-radius: 6px;
@@ -341,6 +315,30 @@ button {
     }
 
     // display: none;
+    @media only screen and (min-width:600px) {
+        h2 {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        .input-radio {
+            font-size: 26px;
+            line-height: 36px;
+
+            .checkmark {
+                width: 16px;
+                height: 16px;
+                border: 2px solid white;
+            }
+        }
+
+        .learn-more-btn {
+            padding: 4px 0;
+            max-width: 264px;
+            font-size: 32px;
+            line-height: 52px;
+        }
+    }
 }
 
 .screen-2 {
@@ -350,8 +348,8 @@ button {
     opacity: 0;
     padding: 0 24px 1vh 24px;
     padding-top: 11.6vh;
-    padding-top: calc(var(--vh, 1vh) * 11.6);
 
+    // padding-top: calc(var(--vh, 1vh) * 11.6);
     h2 {
         margin-bottom: 66px;
     }
@@ -401,8 +399,32 @@ button {
 
     button {
         margin-top: 21vh;
-        margin-top: calc(var(--vh, 1vh) * 21);
+        // margin-top: calc(var(--vh, 1vh) * 21);
         max-width: 176px;
+    }
+
+    @media only screen and (min-width:600px) {
+        h2 {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        .content {
+            max-width: 500px;
+        }
+
+        input {
+            font-size: 22px;
+            line-height: 36px;
+            padding: 8px 13.18px;
+        }
+
+        button {
+            padding: 4px 0;
+            max-width: 264px;
+            font-size: 32px;
+            line-height: 52px;
+        }
     }
 }
 
@@ -410,17 +432,15 @@ button {
     background: url("../assets/images/curly-line-3.svg") bottom no-repeat, black url("../assets/images/bg-1-mobile.png") right no-repeat;
     background-size: cover, cover;
     padding: 21px;
-    transform: translateX(100%);
-    opacity: 0;
+    // transform: translateX(100%);
+    // opacity: 0;
     display: flex;
     flex-direction: column;
-
     padding-top: 20vh;
-    padding-top: calc(var(--vh, 1vh) * 20);
-
+    // padding-top: calc(var(--vh, 1vh) * 20);
     padding-bottom: 8.97vh;
-    padding-bottom: calc(var(--vh, 1vh) * 8.97);
 
+    // padding-bottom: calc(var(--vh, 1vh) * 8.97);
     .header {
         height: 238px;
         display: flex;
@@ -433,7 +453,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5px;
+        margin-bottom: 15%;
 
         .link {
             @include flex-center();
@@ -442,6 +462,21 @@ button {
             border-radius: 50%;
             width: 40px;
             height: 40px;
+            margin: 0 5px;
+        }
+    }
+
+    @media only screen and (min-width:600px) {
+        .socials {
+            .link {
+                width: 60px;
+                height: 60px;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
         }
     }
 }
