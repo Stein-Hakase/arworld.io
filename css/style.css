@@ -316,21 +316,38 @@ button {
   padding: 21px;
   display: flex;
   flex-direction: column;
-  padding-top: 20vh;
-  padding-bottom: 8.97vh;
+  padding-top: 15vh;
+  padding-bottom: 13.97vh;
 }
 .screen-3 .header {
-  height: 238px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.screen-3 .download-btn {
+  font-weight: 500px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  line-height: 53px;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  padding: 13px 0;
+  border: none;
+  background: linear-gradient(93.82deg, #ff5050 -5.6%, #ff50ed 139.41%);
+  width: 100%;
+  max-width: 467px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 9px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
 .screen-3 .socials {
-  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15%;
 }
 .screen-3 .socials .link {
   display: flex;
@@ -342,6 +359,9 @@ button {
   width: 40px;
   height: 40px;
   margin: 0 5px;
+}
+.screen-3 .footer {
+  margin-top: auto;
 }
 @media only screen and (min-width: 600px) {
   .screen-3 .socials .link {
